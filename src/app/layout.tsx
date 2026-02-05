@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Encode_Sans_Expanded } from "next/font/google";
 import "./globals.css";
+import Navbar from "../../componets/Navbar/Navbar";
 
 const encodeSans = Encode_Sans_Expanded({
   variable: "--font-encode-sans",
@@ -25,7 +26,10 @@ export default function RootLayout({
         className={`${encodeSans.variable} antialiased`}
         suppressHydrationWarning
       >
-        {children}
+        <Navbar />
+        <div className="pt-16 sm:pt-20 md:pt-20">
+          {children}
+        </div>
       </body>
     </html>
   );
