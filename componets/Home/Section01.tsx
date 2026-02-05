@@ -7,7 +7,7 @@ function Section01() {
     <div className="grid-container ">
         <div className="hero-container relative w-full h-screen overflow-hidden">
           <Image
-            src="/images/Home/HeroBackground.jpg"      // Local image in public folder
+            src="/Images/Home/HeroBackground.jpg"      // Local image in public folder
             alt="Hero Image"
             fill                        // makes image cover the parent
             style={{ objectFit: "cover"  }}
