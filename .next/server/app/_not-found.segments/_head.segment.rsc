@@ -1,6 +1,0 @@
-1:"$Sreact.fragment"
-2:I[81911,["/_next/static/chunks/d462c9b6432eabec.js","/_next/static/chunks/e307d1a08ccee408.js"],"ViewportBoundary"]
-3:I[81911,["/_next/static/chunks/d462c9b6432eabec.js","/_next/static/chunks/e307d1a08ccee408.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-5:I[39865,["/_next/static/chunks/d462c9b6432eabec.js","/_next/static/chunks/e307d1a08ccee408.js"],"IconMark"]
-0:{"buildId":"1fSXmBFLwaER9XGCdE74t","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Mr Chilli"}],["$","meta","1",{"name":"description","content":"Authentic Sri Lankan spicy dishes with fresh ingredients. Order online for delivery in Colombo. Visit Mr Chilli today!"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.e2d99843.ico","sizes":"1000x1000","type":"image/x-icon"}],["$","$L5","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

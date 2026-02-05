@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/kavindamanohara/Documents/Website/Chili_Website/Chili_Website/src/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\nimport Brownbutton from \"../../componets/Button/Brownbutton\";\nimport Section01 from \"../../componets/Button/Home/Section01\";\nimport Section02 from \"../../componets/Button/Home/Section02\";\nimport Section03 from \"../../componets/Button/Home/Section03\";\nimport Section04 from \"../../componets/Button/Home/Section04\";\nimport Section05 from \"../../componets/Button/Home/Section05\";\nimport Section06 from \"../../componets/Button/Home/Section06\";\nimport Section07 from \"../../componets/Button/Home/Section07\";\nimport Section08 from \"../../componets/Button/Home/Section08\";\nexport default function Home() {\n  return (\n    <main>\n      <Section01 />\n      <Section02 />\n      <Section03 />\n      <Section04 />\n      <Section05 />\n      <Section06 />\n      <Section07 />\n      <Section08 />\n    </main>\n\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAUe,SAAS;IACtB,qBACE,wSAAC;;0BACC,wSAAC;;;;;0BACD,wSAAC;;;;;0BACD,wSAAC;;;;;0BACD,wSAAC;;;;;0BACD,wSAAC;;;;;0BACD,wSAAC;;;;;0BACD,wSAAC;;;;;0BACD,wSAAC;;;;;;;;;;;AAIP"}}]
-}
