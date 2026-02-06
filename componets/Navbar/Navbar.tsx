@@ -8,7 +8,7 @@ function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/About' },
     { name: 'Our Spices', href: '/Spices' },
-    { name: 'Quality & Process', href: '/Quality' },
+    { name: 'Quality & Process', href: '/' },
     { name: 'Help', href: '/Help' }
   ]
 
