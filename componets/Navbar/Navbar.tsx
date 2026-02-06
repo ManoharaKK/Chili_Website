@@ -7,9 +7,12 @@ function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/About' },
-    { name: 'Our Spices', href: '/Spices' },
-    { name: 'Quality & Process', href: '/Quality' },
-    { name: 'Help', href: '/Help' }
+    { name: 'Products', href: '/Product' },
+    { name: 'Our Process', href: '/OurProcess' },
+    { name: 'Certifications', href: '/Certifications' },
+    { name: 'Blog', href: '/Blog' },
+    { name: 'Careers', href: '/Careers' },
+    { name: 'Contact us', href: '/Contactus' }
   ]
 
   return (
@@ -28,12 +31,12 @@ function Navbar() {
         </Link>
 
         {/* Navigation Links */}
-        <div className='hidden md:flex items-center gap-6 lg:gap-8 xl:gap-10'>
+        <div className='hidden lg:flex items-center gap-4 xl:gap-6'>
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className='text-xs sm:text-sm md:text-sm lg:text-base text-gray-800 hover:text-[#BF1D2E] transition-colors duration-200 font-medium'
+              className='text-xs xl:text-sm text-gray-800 hover:text-[#BF1D2E] transition-colors duration-200 font-medium whitespace-nowrap'
             >
               {link.name}
             </Link>

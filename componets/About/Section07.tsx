@@ -114,7 +114,7 @@ function Section07() {
     <div className=''>
       <div className='grid-container'>
        
-        <div className='text-center mb-12 sm:mb-16 md:mb-20'>
+        <div className='text-center mb-12 sm:mb-16 md:mb-20 animate-fade-in-up' style={{ animationDelay: '0.1s' }}>
             <p className='description encode-sans-medium text-gray-500 leading-none '>
 Meet The Team
             </p>

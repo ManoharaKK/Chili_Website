@@ -94,7 +94,7 @@ function Footer() {
     </footer>
     <div className='relative mt-[-20px] sm:mt-[-40px] md:mt-[-50px] lg:mt-[-50px] xl:mt-[-70px] 2xl:mt-[-70px] overflow-hidden z-[-1]'>
         <h1 className='text-[50px] sm:text-[80px]  md:text-[100px] lg:text-[150px] xl:text-[180px] 2xl:text-[200px] text-[#BF1D2E] leading-none'>
-            SRI LANKAN
+            MR CHILLI
         </h1>
     </div>
     </div>

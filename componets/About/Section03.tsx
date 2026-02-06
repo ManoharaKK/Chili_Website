@@ -34,7 +34,7 @@ function Section03() {
         {/* Top Section */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12 sm:mb-16 md:mb-20'>
           {/* Left Side - OUR CORE VALUES */}
-          <div>
+          <div className='animate-fade-in-up' style={{ animationDelay: '0.1s' }}>
           <h1 className='main-title encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none'>
               OUR CORE
             </h1>
@@ -44,7 +44,7 @@ function Section03() {
           </div>
 
           {/* Right Side - WHAT WE STAND FOR */}
-          <div className='flex flex-col justify-center'>
+          <div className='flex flex-col justify-center animate-fade-in-up' style={{ animationDelay: '0.2s' }}>
           <h2 className='title  encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none' > 
               WHAT WE STAND FOR
             </h2>
@@ -62,7 +62,8 @@ function Section03() {
             return (
               <div
                 key={index}
-                className='bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300'
+                className='bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up'
+                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 {/* Icon Container */}
                 <div className='flex justify-center mb-4 sm:mb-6'>
