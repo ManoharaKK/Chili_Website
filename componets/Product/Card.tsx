@@ -215,7 +215,7 @@ function Card() {
         }
     ]
 
-    // Calculate pagination
+   
     const totalPages = Math.ceil(products.length / cardsPerPage)
     const startIndex = (currentPage - 1) * cardsPerPage
     const endIndex = startIndex + cardsPerPage
