@@ -9,10 +9,9 @@ function Navbar() {
     { name: 'About Us', href: '/About' },
 
     { name: 'Products', href: '/Product' },
-    { name: 'Our Process', href: '/OurProcess' },
-    { name: 'Certifications', href: '/Certifications' },
-    { name: 'Blog', href: '/Blog' },
-    { name: 'Careers', href: '/Careers' },
+    { name: 'Our Process', href: '/Quality' },
+    { name: 'Certifications', href: '/Cetification' },
+    { name: 'Careers', href: '/Career' },
     { name: 'Contact us', href: '/Contactus' }
 
   ]

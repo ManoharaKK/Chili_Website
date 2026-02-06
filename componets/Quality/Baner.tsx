@@ -2,7 +2,7 @@ import React from 'react'
 
 function Baner() {
     return (
-        <section className="py-20">
+        <section className="">
             <div className='grid-container'>
                 <div className="w-full bg-[#BF1D2E] rounded-[40px] sm:rounded-[60px] md:rounded-[80px] lg:rounded-[100px] overflow-hidden relative py-16 sm:py-24 md:py-32 px-6 sm:px-12 text-center flex flex-col items-center">
 

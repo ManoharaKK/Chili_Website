@@ -10,7 +10,7 @@ function Section05() {
     ]
 
     return (
-        <section className="py-20">
+        <section className="">
             <div className='grid-container'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
 

@@ -25,7 +25,7 @@ function Section03() {
     ];
 
     return (
-        <section className="w-full py-16 md:py-24 lg:py-32" style={{ background: 'rgba(217, 217, 217, 0.39)' }}>
+        <section className="w-full " style={{ background: 'rgba(217, 217, 217, 0.39)' }}>
             <div className="w-full px-4 sm:px-6 lg:px-12">
                 {/* Header Section */}
                 <div className="flex flex-col items-center text-center mb-16 lg:mb-24">

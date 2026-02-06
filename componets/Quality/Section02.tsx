@@ -10,7 +10,7 @@ function Section02() {
     ]
 
     return (
-        <section>
+        
             <div className='grid-container'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
 
@@ -88,7 +88,7 @@ function Section02() {
 
                 </div>
             </div>
-        </section>
+        
     )
 }
 

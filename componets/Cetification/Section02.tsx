@@ -34,7 +34,7 @@ function Section02() {
     ];
 
     return (
-        <section className="max-w-[1600px] mx-auto px-4 py-16 -mt-20 sm:-mt-32 lg:-mt-48 relative z-40">
+        <div className="max-w-[1600px] mx-auto px-4  relative z-40">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
                 {certifications.map((cert, index) => (
                     <div key={index} className="rounded-apple-card overflow-hidden shadow-xl border border-gray-100 flex flex-col bg-white">
@@ -107,7 +107,7 @@ function Section02() {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 }
 
