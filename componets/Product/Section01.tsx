@@ -1,10 +1,10 @@
 import React from 'react'
-import Image from "next/image";
-import Brownbutton from "../Button/Brownbutton";
+import Image from 'next/image'
+import Brownbutton from '../Button/Brownbutton'
 
 function Section01() {
-  return (
-    <div className='grid-container'>
+    return (
+        <div className='grid-container'>
             <div className="hero-container relative w-full h-screen overflow-hidden">
                 <Image
                     src="/images/About/HeroBg.png"      // Local image in public folder
@@ -20,36 +20,32 @@ function Section01() {
 
                             {/* Left */}
                             <div>
-                                <div className="flex items-center gap-2 lg:gap-6">
+                                <div className="sm:flex items-center gap-2 lg:gap-6">
                                     <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#383838] bg-clip-text text-transparent" style={{ animationDelay: '0.1s' }}>
-                                    Pure
+                                        Premium
                                     </h1>
 
-                                    <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                                    <div className="animate-fade-in my-4 sm:my-0" style={{ animationDelay: '0.2s' }}>
                                         <Brownbutton />
                                     </div>
                                 </div>
 
-                                <div className="ml-[10px] md:ml-[50px] lg:ml-[100px]">
+                                <div className="ml-[10px] md:ml-[50px] lg:ml-[20px]">
                                     <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent" style={{ animationDelay: '0.3s' }}>
-                                    Island
+                                        Quality Spice
                                     </h1>
                                 </div>
 
                                 <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent" style={{ animationDelay: '0.4s' }}>
-                                    Spices
+                                    Products
                                 </h1>
                                 <div>
                                     <div className='mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14 flex items-end gap-6 lg:ml-[20px] xl:ml-[100px] 2xl:ml-[100px] '>
-                                        <div className='h-[200px] w-2 bg-black animate-fade-in-up' style={{ animationDelay: '0.5s' }}>
 
-                                        </div>
                                         <div className='animate-fade-in-up' style={{ animationDelay: '0.6s' }}>
-                                            <h2 className='subtitle'>
-                                            SRI LANKAN SPICES
-                                            </h2>
+
                                             <p className='description'>
-                                                Born from a deep love for Sri Lankan culinary heritage, Mr Chilli connects you directly with the finest spices from the heart of Ceylon. Our journey began with a simple mission: to share the authentic flavors that have made Sri Lankan cuisine legendary.
+                                                Manufactured in our GMP certified facility with consistent quality and authentic Sri Lankan taste. Available in various pack sizes for retail and bulk orders.
                                             </p>
                                         </div>
                                     </div>
@@ -74,7 +70,7 @@ function Section01() {
             </div>
 
         </div>
-  )
+    )
 }
 
 export default Section01

@@ -32,7 +32,7 @@ function Section06() {
     <div className='py-12 sm:py-16 md:py-20 lg:py-24'>
       <div className='grid-container'>
         {/* Title Section */}
-        <div className='mb-12 sm:mb-16 md:mb-20'>
+        <div className='mb-12 sm:mb-16 md:mb-20 animate-fade-in-up' style={{ animationDelay: '0.1s' }}>
           <h1 className='uppercase main-title encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none'>
             Our Journey
           </h1>
@@ -46,7 +46,7 @@ function Section06() {
         {/* Alternating Timeline Design */}
         <div className='relative max-w-6xl mx-auto'>
           {/* Central Vertical Line */}
-          <div className='hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#BF1D2E] via-[#BF1D2E]/50 to-[#BF1D2E] transform -translate-x-1/2'></div>
+          <div className='hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#BF1D2E] via-[#BF1D2E]/50 to-[#BF1D2E] transform -translate-x-1/2 animate-fade-in' style={{ animationDelay: '0.2s' }}></div>
 
           {/* Timeline Items */}
           <div className='space-y-12 sm:space-y-16 md:space-y-20'>
@@ -55,9 +55,10 @@ function Section06() {
               return (
                 <div
                   key={index}
-                  className={`relative flex flex-col md:flex-row items-center gap-6 md:gap-8 group ${
+                  className={`relative flex flex-col md:flex-row items-center gap-6 md:gap-8 group animate-fade-in-up ${
                     isEven ? 'md:flex-row-reverse' : ''
                   }`}
+                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
                   {/* Timeline Node */}
                   <div className='relative shrink-0 z-10'>

@@ -7,7 +7,7 @@ function Section02() {
     <div className='grid-container'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10'>
         {/* OUR MISSION Card */}
-        <div className='bg-gray-100 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10'>
+        <div className='bg-gray-100 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 animate-fade-in-up' style={{ animationDelay: '0.1s' }}>
           <div className='flex items-start gap-4 sm:gap-6'>
             {/* Icon Container */}
             <div className='bg-[#BF1D2E] rounded-xl sm:rounded-2xl p-4 sm:p-5 shrink-0'>
@@ -32,7 +32,7 @@ function Section02() {
         </div>
 
         {/* OUR VISION Card */}
-        <div className='bg-[#BF1D2E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10'>
+        <div className='bg-[#BF1D2E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 animate-fade-in-up' style={{ animationDelay: '0.2s' }}>
           <div className='flex items-start gap-4 sm:gap-6'>
             {/* Icon Container */}
             <div className='bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shrink-0'>
