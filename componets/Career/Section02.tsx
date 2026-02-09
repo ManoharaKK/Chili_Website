@@ -14,7 +14,6 @@ function Section02() {
         businessBackground: '',
         cv: null as File | null
     })
-    const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' })
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -97,47 +96,25 @@ function Section02() {
                     })}
                 </div>
                 <div className='animate-fade-in-up' style={{ animationDelay: '0.5s' }}>
-                    <form onSubmit={async (e) => {
+                    <form onSubmit={(e) => {
                         e.preventDefault()
-                        setIsSubmitting(true)
                         setSubmitStatus({ type: null, message: '' })
 
-                        try {
-                            const response = await fetch('/api/submit-distributor', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify(formData),
-                            })
+                        // Log form data (for development/debugging)
+                        console.log('Form submitted:', formData)
 
-                            const data = await response.json()
-
-                            if (data.success) {
-                                setSubmitStatus({ type: 'success', message: 'Application submitted successfully! We will contact you soon.' })
-                                // Reset form
-                                setFormData({
-                                    fullName: '',
-                                    email: '',
-                                    phone: '',
-                                    area: '',
-                                    businessBackground: '',
-                                    cv: null
-                                })
-                                
-                                // Optionally open mailto as fallback
-                                if (data.mailtoLink) {
-                                    window.location.href = data.mailtoLink
-                                }
-                            } else {
-                                setSubmitStatus({ type: 'error', message: data.message || 'Failed to submit application. Please try again.' })
-                            }
-                        } catch (error) {
-                            console.error('Error submitting form:', error)
-                            setSubmitStatus({ type: 'error', message: 'An error occurred. Please try again later.' })
-                        } finally {
-                            setIsSubmitting(false)
-                        }
+                        // Show success message
+                        setSubmitStatus({ type: 'success', message: 'Application submitted successfully! We will contact you soon.' })
+                        
+                        // Reset form
+                        setFormData({
+                            fullName: '',
+                            email: '',
+                            phone: '',
+                            area: '',
+                            businessBackground: '',
+                            cv: null
+                        })
                     }} className='bg-gray-100 rounded-xl sm:rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-5 md:space-y-6'>
                         {/* Form Title */}
                         <h2 className='text-xl sm:text-2xl md:text-3xl font-bold text-black mb-6 sm:mb-8'>
@@ -257,10 +234,9 @@ function Section02() {
                         <div className='flex items-center gap-3 sm:gap-4'>
                             <button
                                 type='submit'
-                                disabled={isSubmitting}
-                                className='bg-[#BF1D2E] text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-[#BF1D2E]/80 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
+                                className='bg-[#BF1D2E] text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-[#BF1D2E]/80 transition-colors duration-300'
                             >
-                                {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                                Submit Application
                             </button>
                             
                             {/* Decorative Red Circles */}

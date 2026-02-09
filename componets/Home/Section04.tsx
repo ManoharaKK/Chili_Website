@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Brownbutton from '../Button/Brownbutton'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Product {
   id: number;
@@ -179,9 +180,11 @@ function Section04() {
                                         </div>
                                         
                                         {/* Buy Now Button */}
-                                        <button className='w-full bg-white text-gray-800 font-medium py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200'>
-                                            Buy Now
-                                        </button>
+                                        <Link href="/Contactus" className='block w-full'>
+                                            <button className='w-full bg-white text-gray-800 font-medium py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200'>
+                                                Request Quote
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
