@@ -5,7 +5,7 @@ import WppButton from '../Button/WppButton';
 function Section01() {
     return (
         <div className='grid-container'>
-            <div className="hero-container relative w-full min-h-screen overflow-hidden">
+            <div className="hero-container relative w-full h-[700px] sm:h-[900px] md:h-[1000px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
                 {/* Background Image */}
                 <Image
                     src="/Images/Quality/BG.jpg"
@@ -19,7 +19,7 @@ function Section01() {
                 {/* Content Container - Stacked Vertically */}
                 <div className="relative z-30 flex flex-col items-center justify-between min-h-screen w-full px-4 pt-[70px] sm:pt-[90px] md:pt-[110px] lg:pt-[130px] pb-4 sm:pb-6 md:pb-8 lg:pb-10">
                     {/* Top Section - Title and Description */}
-                    <div className="flex flex-col items-center w-full shrink-0">
+                    <div className="flex flex-col items-center w-full shrink-0 mt-[50px] md:mt-[0]">
                         {/* Title */}
                         <div className="flex flex-col items-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
                             <div className="animate-fade-in-up">
@@ -56,7 +56,7 @@ function Section01() {
 
                     {/* Bottom Section - Product Image */}
                     <div className="flex items-end justify-center w-full shrink-0 pointer-events-none mt-auto -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-10">
-                        <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] lg:h-[650px] max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] lg:max-h-[70vh] animate-scale-in-up opacity-90">
+                        <div className="relative w-full h-[200px] sm:h-[450px] md:h-[550px] lg:h-[450px] animate-scale-in-up opacity-90">
                             <Image
                                 src="/Images/Quality/Product.png"
                                 alt="Floating Spice"

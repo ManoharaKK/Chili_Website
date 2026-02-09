@@ -5,7 +5,7 @@ import WppButton from '../Button/WppButton'
 function Section01() {
     return (
         <div className='grid-container'>
-            <div className="hero-container relative w-full h-screen overflow-hidden">
+            <div className="hero-container relative w-full h-[700px] sm:h-[700px] md:h-[700px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
                 <Image
                     src="/images/Products/Bg.jpg"      // Local image in public folder
                     alt="Hero Image"
@@ -53,7 +53,7 @@ function Section01() {
                             </div>
 
                             {/* Right */}
-                            <div className="relative w-full h-[30vh] sm:h-[40vh] md:h-[40vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] animate-scale-in" style={{ animationDelay: '0.7s' }}>
+                            <div className="relative w-full h-[25vh] sm:h-[40vh] md:h-[25vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] animate-scale-in" style={{ animationDelay: '0.7s' }}>
                                 <Image
                                     src="/images/About/HeroProduct.png"
                                     alt="Hero Image"

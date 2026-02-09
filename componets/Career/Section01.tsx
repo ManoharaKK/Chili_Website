@@ -5,7 +5,7 @@ import WppButton from '../Button/WppButton'
 function Section01() {
   return (
     <div className='grid-container'>
-    <div className="hero-container relative w-full h-screen overflow-hidden">
+    <div className="hero-container relative w-full h-[600px] sm:h-[650px] md:h-[700px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
         <Image
             src="/images/About/HeroBg.png"      // Local image in public folder
             alt="Hero Image"

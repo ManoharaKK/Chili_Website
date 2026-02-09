@@ -5,7 +5,7 @@ import WppButton from '../Button/WppButton';
 function Section01() {
   return (
     <div className='grid-container'>
-            <div className="hero-container relative w-full h-screen overflow-hidden">
+            <div className="hero-container relative w-full h-[700px] sm:h-[650px] md:h-[700px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
                 <Image
                     src="/images/About/AboutBgA.jpg"      // Local image in public folder
                     alt="Hero Image"
@@ -19,7 +19,7 @@ function Section01() {
                         <div className="grid lg:grid-cols-2 items-center w-full">
 
                             {/* Left */}
-                            <div>
+                            <div className='pt-[50px] md:pt-[0]'>
                                 <div className="flex items-center gap-2 lg:gap-6">
                                     <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#383838] bg-clip-text text-transparent" style={{ animationDelay: '0.1s' }}>
                                     Pure
@@ -41,7 +41,7 @@ function Section01() {
                                 </h1>
                                 <div>
                                     <div className='mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14 flex items-end gap-6 lg:ml-[20px] xl:ml-[100px] 2xl:ml-[100px] '>
-                                        <div className='h-[200px] w-2 bg-black animate-fade-in-up' style={{ animationDelay: '0.5s' }}>
+                                        <div className='h-[100px] md:h-[100px] lg:h-[200] w-2 bg-black animate-fade-in-up' style={{ animationDelay: '0.5s' }}>
 
                                         </div>
                                         <div className='animate-fade-in-up' style={{ animationDelay: '0.6s' }}>
@@ -57,12 +57,12 @@ function Section01() {
                             </div>
 
                             {/* Right */}
-                            <div className="relative w-full h-[30vh] sm:h-[40vh] md:h-[40vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] animate-scale-in" style={{ animationDelay: '0.7s' }}>
+                            <div className="relative w-full h-[25vh] sm:h-[40vh] md:h-[25vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] animate-scale-in flex items-end" style={{ animationDelay: '0.7s' }}>
                                 <Image
                                     src="/images/About/HeroProduct.png"
                                     alt="Hero Image"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain object-bottom"
                                     priority
                                 />
                             </div>

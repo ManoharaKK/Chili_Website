@@ -5,10 +5,10 @@ import WppButton from '../Button/WppButton';
 function Section01() {
     return (
         <div className='grid-container'>
-            <div className="hero-container relative w-full h-screen overflow-hidden">
+            <div className="hero-container relative w-full h-[600px] sm:h-[650px] md:h-[700px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
                 {/* Background Image */}
                 <Image
-                    src="/Images/Quality/heroim.jpeg"
+                    src="/Images/Cetification/CertBG.jpg"
                     alt="Certification Hero"
                     fill
                     style={{ objectFit: "cover" }}
@@ -17,13 +17,13 @@ function Section01() {
                 />
 
                 {/* Floating Certification Image */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-                    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] animate-fade-in-up opacity-95 translate-y-[100px]">
+                <div className="absolute inset-x-0 bottom-0 z-20 flex items-end justify-center pointer-events-none pb-4 sm:pb-6 md:pb-8 lg:pb-10">
+                    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] animate-scale-in-up opacity-95">
                         <Image
-                            src="/Images/Cetification/ceti.png"
+                            src="/Images/Cetification/Certificate.png"
                             alt="Floating Certification"
                             fill
-                            className="object-contain"
+                            className="object-contain object-bottom"
                         />
                     </div>
                 </div>
