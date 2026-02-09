@@ -6,9 +6,9 @@ import Contact from '../Button/Contact';
 function Section01() {
   return (
     <div className="grid-container ">
-      <div className="hero-container relative w-full h-screen overflow-hidden">
+      <div className="hero-container relative w-full h-[600px] sm:h-[650px] md:h-[700px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
         <Image
-          src="/Images/Home/HeroBackground.jpg"      // Local image in public folder
+          src="/Images/Products/Bg.jpg"      // Local image in public folder
           alt="Hero Image"
           fill                        // makes image cover the parent
           style={{ objectFit: "cover" }}
@@ -68,13 +68,13 @@ function Section01() {
           </div>
 
         </div>
-        <div className="absolute inset-1 ">
-          <div className="relative w-full h-[550px]  sm:h-[500px] md:h-[600px] lg:h-[800px] xl:h-[800px] 2xl:h-[900px] mt-[250px] sm:mt-[150px] md:mt-[200px] lg:mt-[150px] xl:mt-[100px] 2xl:mt-[150px] animate-scale-in" style={{ animationDelay: '0s' }}>
+        <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-1">
+          <div className="relative w-full h-[550px] sm:h-[400px] md:h-[500px] lg:h-[800px] xl:h-[800px] 2xl:h-[800px] max-h-[80vh] animate-scale-in" style={{ animationDelay: '0s' }}>
             <Image
-              src="/Images/Home/Cartoonlogo.svg"
+              src="/Images/Home/HeroProduct.png"
               alt="Illustration"
               fill
-              className="object-contain"
+              className="object-contain object-bottom"
             />
           </div>
         </div>
