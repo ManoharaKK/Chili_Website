@@ -7,7 +7,7 @@ function Section01() {
     <div className='grid-container'>
             <div className="hero-container relative w-full h-[700px] sm:h-[650px] md:h-[700px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
                 <Image
-                    src="/images/About/AboutBgA.jpg"      // Local image in public folder
+                    src="/Images/About/AboutBgA.jpg"      // Local image in public folder
                     alt="Hero Image"
                     fill                        // makes image cover the parent
                     style={{ objectFit: "cover" }}
@@ -59,7 +59,7 @@ function Section01() {
                             {/* Right */}
                             <div className="relative w-full h-[25vh] sm:h-[40vh] md:h-[25vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] animate-scale-in flex items-end" style={{ animationDelay: '0.7s' }}>
                                 <Image
-                                    src="/images/About/HeroProduct.png"
+                                    src="/Images/About/HeroProduct.png"
                                     alt="Hero Image"
                                     fill
                                     className="object-contain object-bottom"

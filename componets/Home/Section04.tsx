@@ -174,7 +174,7 @@ function Section04() {
                                                 <p className='text-2xl font-semibold text-white'>{product.price}</p>
                                             </div>
                                             <div className='text-right'>
-                                                <p className='text-xs text-white/80'>NFT</p>
+                                                <p className='text-xs text-white/80'>Product</p>
                                                 <p className='text-sm text-white font-medium'>{product.nft}</p>
                                             </div>
                                         </div>
