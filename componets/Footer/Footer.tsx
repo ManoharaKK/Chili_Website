@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Footer() {
   return (
@@ -24,7 +25,7 @@ function Footer() {
             
             {/* Description */}
             <p className='text-sm sm:text-base text-white/90 mb-6 leading-relaxed max-w-md'>
-              EASILY SEARCH AND BOOK DOMESTIC AND INTERNATIONAL FLIGHTS WITH REAL-TIME AVAILABILITY.
+              Delivering the purest, most authentic Sri Lankan spices to kitchens around the world, while supporting sustainable farming practices.
             </p>
             
             {/* Phone Number */}
@@ -35,37 +36,17 @@ function Footer() {
 
           {/* Right Side - Navigation Columns */}
           <div className='lg:col-span-3'>
-            <div className='grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8'>
-              {/* COMPANY */}
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8'>
+              {/* PAGES */}
               <div>
-                <h4 className='text-base sm:text-lg font-semibold mb-4 text-white'>COMPANY</h4>
+                <h4 className='text-base sm:text-lg font-semibold mb-4 text-white'>PAGES</h4>
                 <ul className='space-y-3'>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>About Us</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Our Team</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Careers</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>News & Blogs</a></li>
-                </ul>
-              </div>
-
-              {/* PROPERTIES */}
-              <div>
-                <h4 className='text-base sm:text-lg font-semibold mb-4 text-white'>PROPERTIES</h4>
-                <ul className='space-y-3'>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                </ul>
-              </div>
-
-              {/* SERVICES */}
-              <div>
-                <h4 className='text-base sm:text-lg font-semibold mb-4 text-white'>SERVICES</h4>
-                <ul className='space-y-3'>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Sample</a></li>
+                  <li><Link href="/" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Home</Link></li>
+                  <li><Link href="/About" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>About Us</Link></li>
+                  <li><Link href="/Product" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Products</Link></li>
+                  <li><Link href="/Quality" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Our Process</Link></li>
+                  <li><Link href="/Cetification" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Certifications</Link></li>
+                  <li><Link href="/Career" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Careers</Link></li>
                 </ul>
               </div>
 
@@ -73,7 +54,7 @@ function Footer() {
               <div>
                 <h4 className='text-base sm:text-lg font-semibold mb-4 text-white'>SUPPORT</h4>
                 <ul className='space-y-3'>
-                  <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Contact Us</a></li>
+                  <li><Link href="/Contactus" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Contact Us</Link></li>
                   <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>FAQ</a></li>
                   <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Privacy Policy</a></li>
                   <li><a href="#" className='text-sm sm:text-base text-white/80 hover:text-white transition-colors'>Terms Of Service</a></li>

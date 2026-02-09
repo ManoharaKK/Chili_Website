@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Brownbutton from '../Button/Brownbutton'
+import WppButton from '../Button/WppButton'
 
 function Section01() {
   return (
@@ -26,7 +26,7 @@ function Section01() {
                             </h1>
 
                             <div className="animate-fade-in my-4 sm:my-0" style={{ animationDelay: '0.2s' }}>
-                                <Brownbutton />
+                                <WppButton />
                             </div>
                         </div>
 

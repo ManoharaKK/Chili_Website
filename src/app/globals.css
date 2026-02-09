@@ -574,6 +574,22 @@ h1, h2, h3, h4, h5, h6 {
   animation: scaleIn 2s ease-in-out forwards;
 }
 
+@keyframes scaleInUp {
+  0% {
+    transform: scale(0.3) translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.9;
+  }
+}
+
+.animate-scale-in-up {
+  animation: scaleInUp 1.5s ease-out forwards;
+  transform-origin: center bottom;
+}
+
 
 /* Automatic gap between all sections inside <main> */
 main > * + * {

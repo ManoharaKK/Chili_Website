@@ -13,47 +13,56 @@ interface Product {
 
 function Section04() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(4); // Default for SSR
+  const [totalSlides, setTotalSlides] = useState(2); // Default for SSR
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const products: Product[] = [
     {
       id: 1,
-      name: "CEYLON CINNAMON",
+      name: "Chilli Powder",
       image: "/Images/Home/Section04/Product01.png", // Replace with actual spice images
       price: "0.75 LKR",
       nft: "#87652"
     },
     {
       id: 2,
-      name: "BLACK PEPPER",
+      name: "Chilli Flakes",
       image: "/Images/Home/Section04/Product02.png",
       price: "0.75 LKR",
       nft: "#87652"
     },
     {
       id: 3,
-      name: "CLOVES",
+      name: "Curry Powder",
       image: "/Images/Home/Section04/Product01.png",
       price: "0.75 LKR",
       nft: "#87652"
     },
     {
       id: 4,
-      name: "CARDAMOM",
+      name: "Roasted Curry Powder",
       image: "/Images/Home/Section04/Product02.png",
       price: "0.75 LKR",
       nft: "#87652"
     },
     {
       id: 5,
-      name: "TURMERIC",
+      name: "Turmeric Powder",
       image: "/Images/Home/Section04/Product01.png",
       price: "0.75 LKR",
       nft: "#87652"
     },
     {
       id: 6,
-      name: "CINNAMON",
+      name: "Pepper Powder",
+      image: "/Images/Home/Section04/Product04.png",
+      price: "0.75 LKR",
+      nft: "#87652"
+    },
+    {
+      id: 7,
+      name: "Coriander",
       image: "/Images/Home/Section04/Product04.png",
       price: "0.75 LKR",
       nft: "#87652"
@@ -61,20 +70,32 @@ function Section04() {
 
   ];
 
-  const getCardsPerView = () => {
-    if (typeof window === 'undefined') return 4;
-    if (window.innerWidth >= 1280) return 4;
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 640) return 2;
-    return 1;
-  };
+  // Calculate cards per view and total slides on client side only
+  useEffect(() => {
+    const getCardsPerView = () => {
+      if (window.innerWidth >= 1280) return 4;
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 640) return 2;
+      return 1;
+    };
 
-  const cardsPerView = getCardsPerView();
-  const totalSlides = Math.ceil(products.length / cardsPerView);
+    const updateCardsPerView = () => {
+      const newCardsPerView = getCardsPerView();
+      setCardsPerView(newCardsPerView);
+      setTotalSlides(Math.ceil(products.length / newCardsPerView));
+    };
+
+    // Set initial values
+    updateCardsPerView();
+
+    // Update on window resize
+    window.addEventListener('resize', updateCardsPerView);
+    return () => window.removeEventListener('resize', updateCardsPerView);
+  }, [products.length]);
 
   useEffect(() => {
     const carousel = carouselRef.current;
-    if (!carousel) return;
+    if (!carousel || cardsPerView === 0) return;
 
     const handleScroll = () => {
       const scrollLeft = carousel.scrollLeft;
@@ -168,20 +189,22 @@ function Section04() {
                     </div>
                     
                     {/* Pagination Dots */}
-                    <div className='flex justify-center gap-2 mt-6'>
-                        {Array.from({ length: totalSlides }).map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => scrollToSlide(index)}
-                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                    currentIndex === index 
-                                        ? 'bg-gray-600 w-6' 
-                                        : 'bg-gray-300 hover:bg-gray-400'
-                                }`}
-                                aria-label={`Go to slide ${index + 1}`}
-                            />
-                        ))}
-                    </div>
+                    {totalSlides > 0 && (
+                        <div className='flex justify-center gap-2 mt-6'>
+                            {Array.from({ length: totalSlides }).map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => scrollToSlide(index)}
+                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                        currentIndex === index 
+                                            ? 'bg-gray-600 w-6' 
+                                            : 'bg-gray-300 hover:bg-gray-400'
+                                    }`}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
     </div>
   )

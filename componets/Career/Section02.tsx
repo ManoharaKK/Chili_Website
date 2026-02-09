@@ -10,9 +10,12 @@ function Section02() {
         fullName: '',
         email: '',
         phone: '',
+        area: '',
         businessBackground: '',
         cv: null as File | null
     })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' })
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
@@ -94,10 +97,47 @@ function Section02() {
                     })}
                 </div>
                 <div className='animate-fade-in-up' style={{ animationDelay: '0.5s' }}>
-                    <form onSubmit={(e) => {
+                    <form onSubmit={async (e) => {
                         e.preventDefault()
-                        // Handle form submission here
-                        console.log('Form submitted:', formData)
+                        setIsSubmitting(true)
+                        setSubmitStatus({ type: null, message: '' })
+
+                        try {
+                            const response = await fetch('/api/submit-distributor', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(formData),
+                            })
+
+                            const data = await response.json()
+
+                            if (data.success) {
+                                setSubmitStatus({ type: 'success', message: 'Application submitted successfully! We will contact you soon.' })
+                                // Reset form
+                                setFormData({
+                                    fullName: '',
+                                    email: '',
+                                    phone: '',
+                                    area: '',
+                                    businessBackground: '',
+                                    cv: null
+                                })
+                                
+                                // Optionally open mailto as fallback
+                                if (data.mailtoLink) {
+                                    window.location.href = data.mailtoLink
+                                }
+                            } else {
+                                setSubmitStatus({ type: 'error', message: data.message || 'Failed to submit application. Please try again.' })
+                            }
+                        } catch (error) {
+                            console.error('Error submitting form:', error)
+                            setSubmitStatus({ type: 'error', message: 'An error occurred. Please try again later.' })
+                        } finally {
+                            setIsSubmitting(false)
+                        }
                     }} className='bg-gray-100 rounded-xl sm:rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-5 md:space-y-6'>
                         {/* Form Title */}
                         <h2 className='text-xl sm:text-2xl md:text-3xl font-bold text-black mb-6 sm:mb-8'>
@@ -153,6 +193,23 @@ function Section02() {
                             />
                         </div>
 
+                        {/* Area */}
+                        <div>
+                            <label htmlFor='area' className='block text-sm sm:text-base font-medium text-gray-800 mb-2'>
+                                Area<span className='text-[#BF1D2E]'>*</span>
+                            </label>
+                            <input
+                                type='text'
+                                id='area'
+                                name='area'
+                                value={formData.area}
+                                onChange={handleChange}
+                                placeholder='Enter your area/district'
+                                required
+                                className='w-full px-4 sm:px-5 py-3 sm:py-4 bg-white border border-[#BF1D2E] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#BF1D2E] focus:border-transparent text-sm sm:text-base'
+                            />
+                        </div>
+
                         {/* Business Background */}
                         <div>
                             <label htmlFor='businessBackground' className='block text-sm sm:text-base font-medium text-gray-800 mb-2'>
@@ -185,13 +242,25 @@ function Section02() {
                             />
                         </div>
 
+                        {/* Status Message */}
+                        {submitStatus.type && (
+                            <div className={`p-4 rounded-lg ${
+                                submitStatus.type === 'success' 
+                                    ? 'bg-green-100 text-green-800 border border-green-300' 
+                                    : 'bg-red-100 text-red-800 border border-red-300'
+                            }`}>
+                                <p className='text-sm sm:text-base'>{submitStatus.message}</p>
+                            </div>
+                        )}
+
                         {/* Submit Button with Decorative Circles */}
                         <div className='flex items-center gap-3 sm:gap-4'>
                             <button
                                 type='submit'
-                                className='bg-[#BF1D2E] text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-[#BF1D2E]/80 transition-colors duration-300'
+                                disabled={isSubmitting}
+                                className='bg-[#BF1D2E] text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-[#BF1D2E]/80 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
                             >
-                                Submit Application
+                                {isSubmitting ? 'Submitting...' : 'Submit Application'}
                             </button>
                             
                             {/* Decorative Red Circles */}

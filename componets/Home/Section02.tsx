@@ -7,12 +7,12 @@ function Section02() {
 
         <section>
             <div className='grid-container '>
-                <h1 className='main-title encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none'>
-                    PURE SRI LANKAN FROM
+                <h1 className='uppercase main-title encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none'>
+                Why choose
                 </h1>
                 <div className="sm:flex items-center gap-6  lg:gap-6">
-                    <h1 className="main-title encode-sans-medium leading-none bg-gradient-to-r from-[#191919] to-[#383838] bg-clip-text text-transparent">
-                        THE SOURCE</h1>
+                    <h1 className="uppercase main-title encode-sans-medium leading-none bg-gradient-to-r from-[#191919] to-[#383838] bg-clip-text text-transparent">
+                    Mr Chilli?</h1>
                     <div className='mt-4 sm:mt-0'>
                         <Brownbutton />
                     </div>
@@ -38,7 +38,7 @@ function Section02() {
                             </div>
                             <div>
                                 <p className='description'>
-                                    Harvested from fertile lands and carefully processe
+                                authentic Sri Lankan spices with bold, real flavor.
                                 </p>
                             </div>
                         </div>
@@ -55,19 +55,30 @@ function Section02() {
                             />
                             <div className='absolute bottom-4 right-4 lg:bottom-8 lg:right-8 bg-white/20 backdrop-blur-lg p-6 rounded-apple-card max-w-[300px] border border-white/30 shadow-lg'>
                                 <h2 className='subtitle '>
-                                    SRI LANKAN SPICES
+                                Why “Mr Chilli”?
                                 </h2>
                                 <p className='description'>
-                                    Harvested from fertile lands and carefully processed to preserve authenticity, our spices bring tradition, qualit
+                                We chose the name Mr Chilli because chilli represents bold flavor, heat, and authenticity.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className='lg:col-span-3 flex flex-col justify-between'>
                         <div>
-                            <p className='description'>
-                                Harvested from fertile lands and carefully processed to preserve authenticity, our spices bring tradition, qualit
-                            </p>
+                            <ul className='space-y-2 list-disc pl-6'>
+                                <li className='description'>
+                                    Quality raw materials from farmers
+                                </li>
+                                <li className='description'>
+                                    Hygienic processing
+                                </li>
+                                <li className='description'>
+                                    Consistent taste and colour
+                                </li>
+                                <li className='description'>
+                                    Trusted supplier to Lanka Sathosa
+                                </li>
+                            </ul>
                             <div className='relative w-full aspect-square mt-4'>
                             <video
                                 src="/Videos/Section02/Section02secondimage.mp4"

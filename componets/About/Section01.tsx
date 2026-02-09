@@ -1,13 +1,13 @@
 import React from 'react'
 import Image from "next/image";
-import Brownbutton from "../Button/Brownbutton";
+import WppButton from '../Button/WppButton';
 
 function Section01() {
   return (
     <div className='grid-container'>
             <div className="hero-container relative w-full h-screen overflow-hidden">
                 <Image
-                    src="/images/About/HeroBg.png"      // Local image in public folder
+                    src="/images/About/AboutBgA.jpg"      // Local image in public folder
                     alt="Hero Image"
                     fill                        // makes image cover the parent
                     style={{ objectFit: "cover" }}
@@ -26,7 +26,7 @@ function Section01() {
                                     </h1>
 
                                     <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                                        <Brownbutton />
+                                        <WppButton />
                                     </div>
                                 </div>
 

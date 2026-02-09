@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image";
+import WppButton from '../Button/WppButton';
 
 function Section01() {
     return (
@@ -37,7 +38,17 @@ function Section01() {
                                         backgroundImage: 'linear-gradient(98.52deg, #040404 10.39%, #7A7A7A 93.32%)',
                                         animationDelay: '0.1s'
                                     }}>
-                                    Quality You Can<br />Trust
+                                    Quality You Can
+                                    <div className='flex flex-row gap-4 items-center justify-center'>
+                                        <div>
+                                        <h1 className='uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[100px] encode-sans-medium leading-[1.1] bg-clip-text text-transparent'>
+                                            TRUST
+                                        </h1>
+                                        </div>
+                                        <div className='my-2 sm:my-0'>
+                                            <WppButton />
+                                        </div>
+                                    </div>
                                 </h1>
                             </div>
                         </div>

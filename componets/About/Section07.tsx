@@ -9,35 +9,35 @@ function Section07() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Rajitha Fernando',
+      name: 'Name01',
       title: 'Founder & CEO',
       description: 'Passionate about bringing authentic Sri Lankan spices to the world.',
       image: '/Images/Home/Section04/Product01.png'
     },
     {
       id: 2,
-      name: 'Kavinda Manohara',
+      name: 'Name02',
       title: 'Founder & CEO',
       description: 'Works directly with our network of local farmers.',
       image: '/Images/Home/Section04/Product02.png'
     },
     {
       id: 3,
-      name: 'Kumari Perera',
+      name: 'Name03',
       title: 'Head of Quality',
       description: '15+ years experience in spice quality control and processing.',
       image: '/Images/Home/Section04/Product03.png'
     },
     {
       id: 4,
-      name: 'Lahiru Rathnayake',
+      name: 'Name04',
       title: 'Head of Quality',
       description: '15+ years experience in spice quality control and processing.',
       image: '/Images/Home/Section04/Product04.png'
     },
     {
       id: 5,
-      name: 'Kumari Perera',
+      name: 'Name05',
       title: 'Head of Quality',
       description: '15+ years experience in spice quality control and processing.',
       image: '/Images/Home/Section04/Product03.png'

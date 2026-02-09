@@ -24,11 +24,11 @@ function Section06() {
                     {/* Content */}
                     <div className='mt-auto'>
                         <h2 className='subtitle encode-sans-medium text-gray-800 leading-none mb-4'>
-                            SRI LANKAN FROM THE SOURC
+                        GMP Certified (current)
                         </h2>
                         <div className='bg-gray-800 w-3/6 h-[2px] mt-4 mb-4'></div>
                         <p className='description encode-sans-medium text-gray-500 leading-none'>
-                            Harvested from fertile lands and carefully processed to preserve authenticity, our spices bring tradition, qualit
+                        We are GMP Certified, ensuring high-quality and safe production standards.
                         </p>
                     </div>
                 </div>
@@ -42,12 +42,12 @@ function Section06() {
                     {/* Content */}
                     <div className='mt-auto'>
                         <h2 className='subtitle encode-sans-medium text-white leading-none '>
-                            SRI LANKAN FROM THE SOURC
+                        ⁠ISO 22000 – Coming Soon (text only, no logo)
                         </h2>
                         <div className='mt-4'>
                         <p className='description encode-sans-medium text-white/90 leading-none'>
-                            Harvested from fertile lands and carefully processed to preserve authenticity, our spices bring tradition, quality, and excellence to every kitchen.Harvested from
-                        </p>
+                        ISO 22000 certification is coming soon to further strengthen our food safety commitment.
+                                                </p>
                         </div>
                     </div>
                 </div>

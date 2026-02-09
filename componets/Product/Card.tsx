@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaCheck } from 'react-icons/fa6'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Card() {
     const [currentPage, setCurrentPage] = useState(1)
@@ -282,9 +283,11 @@ function Card() {
                                 </div>
                             ))}
                         </div>
-                        <button className='bg-[#BF1D2E] text-white px-4 py-2 rounded-apple-button w-full mt-4'>
-                            Request Quote
-                        </button>
+                        <Link href="/Contactus" className='block w-full mt-4'>
+                            <button className='bg-[#BF1D2E] text-white px-4 py-2 rounded-apple-button w-full hover:bg-[#BF1D2E]/90 transition-colors duration-200'>
+                                Request Quote
+                            </button>
+                        </Link>
                     </div>
                 </div>
             ))}
