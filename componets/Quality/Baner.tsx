@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Baner() {
     return (
@@ -34,24 +35,32 @@ function Baner() {
 
                         <div className='flex gap-2 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 group transition-all duration-300 cursor-pointer'>
                             <div>
-                                <button className="bg-white text-[#BF1D2E] outline outline-2 outline-white outline-offset-2 h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] px-6 sm:px-6 md:px-8 lg:px-10 xl:px-12 rounded-full text-xs sm:text-xs md:text-sm lg:text-base xl:text-base font-bold flex items-center justify-center transition-all duration-300 group-hover:bg-white/90 group-hover:scale-105">
-                                    View Certifications
-                                </button>
+                                <Link href="/Cetification" className="block">
+                                    <button className="bg-white text-[#BF1D2E] outline outline-2 outline-white outline-offset-2 h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] px-6 sm:px-6 md:px-8 lg:px-10 xl:px-12 rounded-full text-xs sm:text-xs md:text-sm lg:text-base xl:text-base font-bold flex items-center justify-center transition-all duration-300 group-hover:bg-white/90 group-hover:scale-105">
+                                        View Certifications
+                                    </button>
+                                </Link>
                             </div>
 
                             <div className='flex gap-2 sm:gap-2 md:gap-1.5 lg:gap-2 xl:gap-2 transition-all duration-300'>
-                                <button className="bg-white aspect-square h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] rounded-full flex items-center justify-center outline outline-2 outline-white outline-offset-2 transition-all duration-300 group-hover:bg-white/90 group-hover:scale-110">
-                                </button>
-                                <button className="bg-white aspect-[3/6] h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] rounded-r-full flex items-center justify-center outline outline-2 outline-white transition-all duration-300 group-hover:bg-white/90 group-hover:scale-110">
-                                </button>
+                                <Link href="/Cetification" className="block">
+                                    <button className="bg-white aspect-square h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] rounded-full flex items-center justify-center outline outline-2 outline-white outline-offset-2 transition-all duration-300 group-hover:bg-white/90 group-hover:scale-110">
+                                    </button>
+                                </Link>
+                                <Link href="/Cetification" className="block">
+                                    <button className="bg-white aspect-[3/6] h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] rounded-r-full flex items-center justify-center outline outline-2 outline-white transition-all duration-300 group-hover:bg-white/90 group-hover:scale-110">
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
                         {/* Contact Quality Team Button */}
-                        <button className="border-2 border-white text-white px-8 py-4 rounded-full text-sm sm:text-base hover:bg-white hover:text-[#BF1D2E] transition-all h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] flex items-center"
-                            style={{ fontWeight: 400 }}>
-                            Contact Quality Team
-                        </button>
+                        <Link href="/Contactus" className="block">
+                            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-sm sm:text-base hover:bg-white hover:text-[#BF1D2E] transition-all h-[32px] sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px] flex items-center"
+                                style={{ fontWeight: 400 }}>
+                                Contact Quality Team
+                            </button>
+                        </Link>
                     </div>
 
                 </div>

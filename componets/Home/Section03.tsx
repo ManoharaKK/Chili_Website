@@ -8,7 +8,7 @@ function Section03() {
       <div className='grid lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-7 2xl:gap-8 mt-4 items-end'>
         <div className='lg:col-span-2 pr-[10px] sm:pr-[100px] md:pr-[100px] lg:pr-[20px] xl:pr-[5px] 2xl:pr-[100px] '>
           <h2 className='title  encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none'>
-            PURE SRI LANKAN FROM THE SOURC
+            PURE SRI LANKAN FROM THE SOURCE
           </h2>
           <div className='mt-8'>
             <p className='description encode-sans-medium text-gray-500 leading-none '>

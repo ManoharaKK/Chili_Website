@@ -5,7 +5,7 @@ function Section07() {
     return (
         <div className='grid-container'>
             <h2 className='title  encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none lg:max-w-3/5'>
-                PURE SRI LANKAN FROM THE SOURC
+                PURE SRI LANKAN FROM THE SOURCE
             </h2>
             <div className='grid lg:grid-cols-5 gap-4 items-stretch mt-8'>
                 <div className='col-span-3 lg:mr-[50px]'>

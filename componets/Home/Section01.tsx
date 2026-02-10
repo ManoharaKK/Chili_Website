@@ -58,7 +58,7 @@ function Section01() {
             </div>
           </div>
 
-          <div className="relative w-full h-full mt-[-250px] sm:mt-[-250px] md:mt-[-200px] lg:mt-[-200px] xl:mt-[-230px] 2xl:mt-[-280px] animate-fade-in" style={{ animationDelay: '0.7s' }}>
+          <div className="relative w-full h-full mt-[-250px] sm:mt-[-250px] md:mt-[-200px] lg:mt-[-200px] xl:mt-[-230px] 2xl:mt-[-280px] animate-carousel-left-to-right">
             <Image
               src="/Images/Home/SPICES.svg"
               alt="Illustration"
@@ -69,7 +69,7 @@ function Section01() {
 
         </div>
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-center px-1">
-          <div className="relative w-full h-[550px] sm:h-[400px] md:h-[500px] lg:h-[800px] xl:h-[800px] 2xl:h-[800px] max-h-[80vh] animate-scale-in" style={{ animationDelay: '0s' }}>
+          <div className="relative w-full h-[550px] sm:h-[400px] md:h-[500px] lg:h-[800px] xl:h-[800px] 2xl:h-[800px] max-h-[80vh] animate-modern-float">
             <Image
               src="/Images/Home/HeroProduct.png"
               alt="Illustration"

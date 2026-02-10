@@ -6,7 +6,7 @@ function Section05() {
             <div className='grid lg:grid-cols-2 gap-4 items-stretch'>
                 <div className='flex flex-col mb-4 lg:mb-8'>
                     <h2 className='title  encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none'>
-                        PURE SRI LANKAN FROM THE SOURC
+                        PURE SRI LANKAN FROM THE SOURCE
                     </h2>
                     <div className='bg-black w-3/6 h-[2px] mt-4 mb-4'></div>
                     <p className='description encode-sans-medium text-gray-500 leading-none '>

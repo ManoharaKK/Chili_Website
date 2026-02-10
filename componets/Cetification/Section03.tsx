@@ -25,14 +25,14 @@ function Section03() {
     ];
 
     return (
-        <section className="w-full " style={{ background: 'rgba(217, 217, 217, 0.39)' }}>
+        <section className="w-full py-16" style={{ background: 'rgba(217, 217, 217, 0.39)' }}>
             <div className="w-full px-4 sm:px-6 lg:px-12">
                 {/* Header Section */}
-                <div className="flex flex-col items-center text-center mb-16 lg:mb-24">
+                <div className="flex flex-col items-center text-center mb-16 lg:mb-24 ">
                     {/* Badge */}
-                    <div className="bg-[#BF1D2E] text-white px-4 py-1.5 rounded-full text-[10px] sm:text-[12px] uppercase font-bold mb-6 sm:mb-8 md:mb-10">
+                    {/* <div className="bg-[#BF1D2E] text-white px-4 py-1.5 rounded-full text-[10px] sm:text-[12px] uppercase font-bold mb-6 sm:mb-8 md:mb-10">
                         Our Commitment
-                    </div>
+                    </div> */}
 
                     {/* Title */}
                     <h2 className="main-title uppercase tracking-tighter mb-6 leading-tight text-[#191919]"

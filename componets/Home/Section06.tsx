@@ -42,7 +42,7 @@ function Section06() {
                     {/* Content */}
                     <div className='mt-auto'>
                         <h2 className='subtitle encode-sans-medium text-white leading-none '>
-                        ⁠ISO 22000 – Coming Soon (text only, no logo)
+                        ⁠ISO 22000 – Coming Soon 
                         </h2>
                         <div className='mt-4'>
                         <p className='description encode-sans-medium text-white/90 leading-none'>

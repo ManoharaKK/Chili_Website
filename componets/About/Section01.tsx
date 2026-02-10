@@ -49,7 +49,7 @@ function Section01() {
                                             SRI LANKAN SPICES
                                             </h2>
                                             <p className='description'>
-                                                Born from a deep love for Sri Lankan culinary heritage, Mr Chilli connects you directly with the finest spices from the heart of Ceylon. Our journey began with a simple mission: to share the authentic flavors that have made Sri Lankan cuisine legendary.
+                                                Born from a deep love for Sri Lankan culinary heritage, Mr Chilli connects you directly with the finest spices from the Heart of Ceylon. Our journey began with a simple mission: to share the authentic flavors that have made Sri Lankan cuisine legendary.
                                             </p>
                                         </div>
                                     </div>

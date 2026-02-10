@@ -6,7 +6,7 @@ function Section02() {
         {
             title: "GMP CERTIFIED",
             subtitle: "Certified",
-            description: "Good Manufacturing Practice certification ensures our facility follows strict quality standards in production, testing, and quality assurance.",
+            description: "Good Manufacturing Practice Certification ensures our facility follows strict quality standards in production, testing, and quality assurance.",
             points: [
                 "Hygienic manufacturing environment",
                 "Regular facility inspections",

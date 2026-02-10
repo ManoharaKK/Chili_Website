@@ -38,7 +38,7 @@ function Section03() {
                 </div>
                 <div className='col-span-2'>
                     <h2 className='title flex items-end justify-end encode-sans-medium bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent leading-none animate-fade-in-up' style={{ animationDelay: '0.2s' }}>
-                        Contact us
+                        Contact Us
                     </h2>
                     <div className='h-px bg-black/20 my-4 animate-fade-in' style={{ animationDelay: '0.3s' }}>
                     </div>

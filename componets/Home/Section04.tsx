@@ -23,49 +23,49 @@ function Section04() {
       id: 1,
       name: "Chilli Powder",
       image: "/Images/Home/Section04/Product01.png", // Replace with actual spice images
-      price: "0.75 LKR",
+      price: "Product01",
       nft: "#87652"
     },
     {
       id: 2,
       name: "Chilli Flakes",
       image: "/Images/Home/Section04/Product02.png",
-      price: "0.75 LKR",
+      price: "Product02",
       nft: "#87652"
     },
     {
       id: 3,
       name: "Curry Powder",
       image: "/Images/Home/Section04/Product01.png",
-      price: "0.75 LKR",
+      price: "Product01",
       nft: "#87652"
     },
     {
       id: 4,
       name: "Roasted Curry Powder",
       image: "/Images/Home/Section04/Product02.png",
-      price: "0.75 LKR",
+      price: "Product02",
       nft: "#87652"
     },
     {
       id: 5,
       name: "Turmeric Powder",
       image: "/Images/Home/Section04/Product01.png",
-      price: "0.75 LKR",
+      price: "Product01",
       nft: "#87652"
     },
     {
       id: 6,
       name: "Pepper Powder",
       image: "/Images/Home/Section04/Product04.png",
-      price: "0.75 LKR",
+      price: "Product04",
       nft: "#87652"
     },
     {
       id: 7,
       name: "Coriander",
       image: "/Images/Home/Section04/Product04.png",
-      price: "0.75 LKR",
+      price: "Product04",
       nft: "#87652"
     }
 
@@ -170,7 +170,7 @@ function Section04() {
                                     <div className='mt-auto bg-[#4D4D4D] rounded-2xl px-6 py-4 m-1'>
                                         <div className='flex items-center justify-between mb-3'>
                                             <div>
-                                                <p className='text-xs text-white/80 mb-1'>Current Price</p>
+                                                <p className='text-xs text-white/80 mb-1'>Product</p>
                                                 <p className='text-2xl font-semibold text-white'>{product.price}</p>
                                             </div>
                                             <div className='text-right'>

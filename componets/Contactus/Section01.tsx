@@ -34,7 +34,7 @@ function Section01() {
           <div className='mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14 flex justify-center'>
             <div className='max-w-[80%] animate-fade-in-up' style={{ animationDelay: '0.4s' }}>
               <p className='description text-center'>
-                Born from a deep love for Sri Lankan culinary heritage, Mr Chilli connects you directly with the finest spices from the heart of Ceylon. Our journey began with a simple mission: to share the authentic flavors that have made Sri Lankan cuisine legendary.
+                Born from a deep love for Sri Lankan culinary heritage, Mr Chilli connects you directly with the finest spices from the Heart of Ceylon. Our journey began with a simple mission: to share the authentic flavors that have made Sri Lankan cuisine legendary.
               </p>
             </div>
           </div>

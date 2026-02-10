@@ -15,7 +15,7 @@ function Navbar() {
     { name: 'Our Process', href: '/Quality' },
     { name: 'Certifications', href: '/Cetification' },
     { name: 'Careers', href: '/Career' },
-    { name: 'Contact us', href: '/Contactus' }
+    { name: 'Contact Us', href: '/Contactus' }
   ]
 
   const toggleMobileMenu = () => {
@@ -27,8 +27,9 @@ function Navbar() {
   }
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-[9999] bg-white w-full py-2 sm:py-2 md:py-2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-4 '>
-      <div className='px-0 sm:px-5 md:px-0 lg:px-5 xl:px-10 2xl:px-10 mx-auto flex items-center justify-between'>
+    <nav className='fixed top-0 left-0 right-0 z-[9999] w-full py-1 sm:py-1 md:py-1 px-2 sm:px-3 md:px-4 lg:px-6 xl:px-2'>
+      <div className='px-0 sm:px-2 md:px-0 lg:px-2 xl:px-4 2xl:px-4 mx-auto max-w-7xl'>
+        <div className='bg-white/80 backdrop-blur-md rounded-full border border-white/20 shadow-lg px-3 sm:px-4 md:px-5 lg:px-6 xl:px-8 py-2 sm:py-2 md:py-2.5 flex items-center justify-between'>
         {/* Logo Section */}
         <Link href="/" className='flex items-center gap-3 hover:opacity-80 transition-opacity'>
           <div className='relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16'>
@@ -74,14 +75,15 @@ function Navbar() {
 
         {/* Right Side - Red Circles */}
         <div className='hidden md:flex items-center gap-1'>
-          <div className='w-10 h-10 sm:w-12 sm:h-12 bg-[#BF1D2E] rounded-full'></div>
-          <div className='w-5 h-10 sm:w-6 sm:h-12 bg-[#BF1D2E] rounded-r-full'></div>
+          <div className='w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-[#BF1D2E] rounded-full'></div>
+          <div className='w-3 h-6 sm:w-3.5 sm:h-7 md:w-4 md:h-8 bg-[#BF1D2E] rounded-r-full'></div>
+        </div>
         </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className='md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-[9998]'>
+        <div className='md:hidden absolute top-full left-4 right-4 bg-white/90 backdrop-blur-md rounded-b-2xl border border-white/20 shadow-lg z-[9998] mt-2'>
           <div className='flex flex-col py-4'>
             {navLinks.map((link) => {
               const isActive = pathname === link.href
