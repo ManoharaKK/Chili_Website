@@ -65,7 +65,7 @@ function Navbar() {
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMobileMenu}
-          className='md:hidden flex flex-col gap-1.5 p-2 relative'
+          className='lg:hidden flex flex-col gap-1.5 p-2 relative'
           aria-label="Toggle mobile menu"
         >
           <span className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -74,7 +74,7 @@ function Navbar() {
         </button>
 
         {/* Right Side - Red Circles */}
-        <div className='hidden md:flex items-center gap-1'>
+        <div className='hidden lg:flex items-center gap-1'>
           <div className='w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-[#BF1D2E] rounded-full'></div>
           <div className='w-3 h-6 sm:w-3.5 sm:h-7 md:w-4 md:h-8 bg-[#BF1D2E] rounded-r-full'></div>
         </div>
@@ -83,7 +83,7 @@ function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className='md:hidden absolute top-full left-4 right-4 bg-white/90 backdrop-blur-md rounded-b-2xl border border-white/20 shadow-lg z-[9998] mt-2'>
+        <div className='lg:hidden absolute top-full left-4 right-4 bg-white/90 backdrop-blur-md rounded-b-2xl border border-white/20 shadow-lg z-[9998] mt-2'>
           <div className='flex flex-col py-4'>
             {navLinks.map((link) => {
               const isActive = pathname === link.href

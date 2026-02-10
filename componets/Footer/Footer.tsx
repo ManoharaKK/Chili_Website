@@ -1,141 +1,143 @@
-import React from 'react'
-import Image from 'next/image'
+"use client"
+
+import React, { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 function Footer() {
+  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/About' },
+    { name: 'Products', href: '/Product' },
+    { name: 'Our Process', href: '/Quality' },
+    { name: 'Certifications', href: '/Cetification' },
+    { name: 'Careers', href: '/Career' },
+    { name: 'Contact Us', href: '/Contactus' }
+  ]
+
   return (
-    <footer className='relative bg-gradient-to-r from-[#BF1D2E] via-[#BF1D2E] to-[#9a1625] text-white overflow-hidden'>
-      <div className='relative max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 lg:py-20'>
-        {/* Logo Section */}
-        <div className='mb-12 lg:mb-16'>
-          <div className='flex items-center gap-3'>
-            <div className='relative w-12 h-12 sm:w-14 sm:h-14'>
-              <Image
-                src="/Images/Home/Cartoonlogo.svg"
-                alt="Mr Chilli Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <h3 className='text-2xl sm:text-3xl font-bold text-white tracking-tight'>MR CHILLI</h3>
-          </div>
+    <footer className="relative bg-gradient-to-r from-[#BF1D2E] via-[#BF1D2E] to-[#9a1625] text-white ">
+      {/* Big brand text - anchored to bottom, with horizontal blur lines like reference */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-center translate-y-1/2 overflow-hidden">
+        <div className="relative">
+          {/* Base text */}
+          <p
+            className="text-[66px] sm:text-[140px] md:text-[150px] lg:text-[160px] xl:text-[220px] font-extrabold uppercase tracking-tight text-white/20 select-none leading-none"
+            style={{
+              WebkitTextStroke: '2px #BF1D2E',
+              paintOrder: 'stroke fill',
+            }}
+          >
+            MR CHILI
+          </p>
+
+          {/* Horizontal motion-blur style lines across the bottom half */}
+          <div
+            className="absolute inset-x-[-15%] bottom-[-10%] h-1/2 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.35)_0,rgba(255,255,255,0.35)_2px,transparent_2px,transparent_8px)] opacity-70 blur-sm"
+          />
+        </div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 space-y-8 sm:space-y-10 md:space-y-12">
+        {/* Top row: Terms / Copyright / Privacy */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 text-[9px] sm:text-[10px] md:text-xs text-white/70">
+          <Link
+            href="#"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
+            Terms &amp; Conditions
+          </Link>
+
+          <p className="text-center text-white/70 text-[9px] sm:text-[10px] md:text-xs whitespace-nowrap">
+            © 2026, Mr Chilli, All Rights Reserved.
+          </p>
+
+          <Link
+            href="#"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
+            Privacy Policy
+          </Link>
         </div>
 
-        {/* Navigation Links */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12 lg:mb-16'>
-          {/* PAGES */}
-          <div className='flex flex-col'>
-            <h4 className='text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-6'>
-              PAGES
-            </h4>
-            <ul className='space-y-4'>
-              <li>
-                <Link href="/" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Home</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/About" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>About Us</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Product" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Products</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Quality" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Our Process</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Cetification" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Certifications</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Career" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Careers</span>
-                </Link>
-              </li>
-            </ul>
+        {/* Bottom pill navigation bar – uses main nav titles, highlights current page */}
+        <div className="flex flex-col items-center px-2 sm:px-0">
+          {/* Toggle button for small and medium screens */}
+          <div className="lg:hidden w-full max-w-xs relative">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="w-full flex items-center justify-between rounded-full bg-black/70 border border-white/10 px-4 py-2.5 backdrop-blur-md text-white/80 hover:text-white transition-colors duration-200"
+            >
+              <span className="text-xs font-medium">Navigation Menu</span>
+              <span className={`text-lg transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
+                ▼
+              </span>
+            </button>
+
+            {/* Dropdown menu */}
+            {isMenuOpen && (
+              <div className="absolute top-full left-0 right-0 mt-2 rounded-2xl bg-black/90 border border-white/10 backdrop-blur-md shadow-lg overflow-hidden z-50 animate-fade-in">
+                <div className="flex flex-col py-2">
+                  {navLinks.map((link) => {
+                    const isActive = pathname === link.href
+                    return (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`px-4 py-2.5 text-sm transition-colors duration-200 ${
+                          isActive
+                            ? 'bg-gradient-to-r from-[#BF1D2E] to-[#E83A4B] text-white'
+                            : 'text-white/80 hover:text-white hover:bg-white/5'
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* COMPANY */}
-          <div className='flex flex-col'>
-            <h4 className='text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-6'>
-              COMPANY
-            </h4>
-            <ul className='space-y-4'>
-              <li>
-                <Link href="/About" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>About</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Contactus" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Contact Us</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Career" className='text-sm text-white/80 hover:text-white transition-colors flex items-center gap-2 group'>
-                  <span className='text-white/50 group-hover:text-white transition-colors'>&gt;</span>
-                  <span>Careers</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Map Section - Right Corner */}
-          <div className='flex flex-col w-full col-span-1 sm:col-span-2 lg:col-span-1'>
-            <h4 className='text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-6'>
-              LOCATION
-            </h4>
-            <div className='w-full h-[240px] sm:h-[260px] md:h-[280px] rounded-lg overflow-hidden border border-white/20'>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.904509683!2d79.852973!3d6.9271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTUnMzcuNiJOIDc5wrA1MScxMC43IkU!5e0!3m2!1sen!2slk!4v1234567890123!5m2!1sen!2slk"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
-              ></iframe>
+          {/* Navigation links - always visible on large screens */}
+          <div className="hidden lg:block w-full max-w-4xl">
+            <div className="mx-auto flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4 rounded-full bg-black/70 border border-white/10 px-4 md:px-6 lg:px-8 py-3 md:py-4 backdrop-blur-md">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`whitespace-nowrap text-xs md:text-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full transition-colors duration-200 ${
+                      isActive
+                        ? 'bg-gradient-to-r from-[#BF1D2E] to-[#E83A4B] text-white'
+                        : 'text-white/80 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className='border-t border-white/20 pt-8 pb-6'>
-          <div className='flex flex-col md:flex-row md:justify-between items-center gap-3 md:gap-4'>
-            {/* Footer Links */}
-            <div className='flex flex-col sm:flex-col md:flex-row items-center gap-3 md:gap-6 text-xs text-white/60'>
-              <a href="#" className='hover:text-white transition-colors uppercase tracking-wide'>
-                PRIVACY POLICY
-              </a>
-              <a href="#" className='hover:text-white transition-colors uppercase tracking-wide'>
-                TERMS OF USE
-              </a>
-              <a href="#" className='hover:text-white transition-colors uppercase tracking-wide'>
-                NEWSLETTER
-              </a>
-            </div>
-
-            {/* Copyright */}
-            <p className='text-xs text-white/60 text-center md:text-left'>
-              Copyright Mr Chilli, Inc. 2026. All Rights Reserved.
-            </p>
-          </div>
+        {/* Back to top button */}
+        <div className="flex justify-center sm:justify-end px-2 sm:px-0">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-[#BF1D2E] text-white text-[10px] sm:text-xs md:text-sm px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 hover:-translate-y-0.5 transition-transform duration-200"
+          >
+            <span className="inline-flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded-full bg-white text-[#BF1D2E] text-[9px] sm:text-[10px]">
+              ↑
+            </span>
+            <span className="hidden xs:inline">Back to Top</span>
+            <span className="xs:hidden">Top</span>
+          </button>
         </div>
       </div>
     </footer>

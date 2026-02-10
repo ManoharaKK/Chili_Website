@@ -1,9 +1,39 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect, useState } from 'react'
 import Image from "next/image";
 import Brownbutton from "../Button/Brownbutton";
 import Contact from '../Button/Contact';
 
 function Section01() {
+  const [spicesOffset, setSpicesOffset] = useState(-20) // start slightly left
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    let lastScrollY = window.scrollY
+
+    const handleScroll = () => {
+      const currentY = window.scrollY
+      const delta = currentY - lastScrollY
+      lastScrollY = currentY
+
+      if (Math.abs(delta) < 1) return
+
+      setSpicesOffset((prev) => {
+        const step = 1.5 // Reduced step size for slower movement
+        let next = prev + (delta > 0 ? step : -step)
+        // clamp between -20% (left) and 20% (right)
+        if (next > 20) next = 20
+        if (next < -20) next = -20
+        return next
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="grid-container ">
       <div className="hero-container relative w-full h-[700px] sm:h-[850px] md:h-[900px] lg:h-screen xl:h-screen 2xl:h-screen overflow-hidden">
@@ -58,13 +88,21 @@ function Section01() {
             </div>
           </div>
 
-          <div className="relative w-full h-full mt-[-250px] sm:mt-[-250px] md:mt-[-200px] lg:mt-[-200px] xl:mt-[-230px] 2xl:mt-[-280px] animate-carousel-left-to-right">
-            <Image
-              src="/Images/Home/SPICES.svg"
-              alt="Illustration"
-              fill
-              className="object-contain"
-            />
+          <div className="relative w-full h-full mt-[-250px] sm:mt-[-250px] md:mt-[-200px] lg:mt-[-200px] xl:mt-[-230px] 2xl:mt-[-280px] overflow-visible">
+            <div
+              className="absolute inset-0"
+              style={{
+                transform: `translateX(${spicesOffset}%)`,
+                transition: 'transform 0.8s ease-out',
+              }}
+            >
+              <Image
+                src="/Images/Home/SPICES.svg"
+                alt="Illustration"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
 
         </div>
