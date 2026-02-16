@@ -20,9 +20,9 @@ function Section01() {
 
                             {/* Left */}
                             <div>
-                                <div className="sm:flex items-center gap-2 lg:gap-6">
-                                    <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#383838] bg-clip-text text-transparent" style={{ animationDelay: '0.1s' }}>
-                                        Premium
+                                <div className="sm:flex items-center gap-2 lg:gap-2">
+                                    <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium  animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#383838] bg-clip-text text-transparent" style={{ animationDelay: '0.1s' }}>
+                                    Pure &
                                     </h1>
 
                                     <div className="animate-fade-in my-4 sm:my-0" style={{ animationDelay: '0.2s' }}>
@@ -31,13 +31,13 @@ function Section01() {
                                 </div>
 
                                 <div className="ml-[10px] md:ml-[50px] lg:ml-[20px]">
-                                    <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent" style={{ animationDelay: '0.3s' }}>
-                                        Quality Spice
+                                    <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-mediumnew  animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent" style={{ animationDelay: '0.3s' }}>
+                                    Premium
                                     </h1>
                                 </div>
 
-                                <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium leading-none animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent" style={{ animationDelay: '0.4s' }}>
-                                    Products
+                                <h1 className="uppercase text-[40px] sm:text-[50px] md:text-[60px] lg:text-[60px] xl:text-[70px] 2xl:text-[90px] encode-sans-medium  animate-fade-in-up bg-gradient-to-r from-[#191919] to-[#919191] bg-clip-text text-transparent" style={{ animationDelay: '0.4s' }}>
+                                Spices
                                 </h1>
                                 <div>
                                     <div className='mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14 flex items-end gap-6 lg:ml-[20px] xl:ml-[100px] 2xl:ml-[100px] '>

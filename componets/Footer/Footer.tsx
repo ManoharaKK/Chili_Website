@@ -52,7 +52,7 @@ function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className='flex items-center gap-2 md:block' >
@@ -158,7 +158,7 @@ function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-white/60 text-center sm:text-left">
-              © 2026 Mr Chilli. All Rights Reserved.
+            © 2026 Sphiria Digital. All Rights Reserved. Designed by Sphiria Digital.
             </p>
             <div className="flex items-center gap-6 text-sm text-white/60">
               <Link href="/" className="hover:text-white transition-colors">

@@ -55,6 +55,13 @@ body {
   font-weight: 400;
   line-height: 0.9; 
 }
+.encode-sans-mediumnew {
+  font-family: var(--font-encode-sans), sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400;
+  line-height: 1.2; 
+}
 
 .encode-sans-semibold {
   font-family: var(--font-encode-sans), sans-serif;

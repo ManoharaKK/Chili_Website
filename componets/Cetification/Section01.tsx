@@ -28,7 +28,7 @@ function Section01() {
                     </div>
                 </div>
 
-                <div className="absolute inset-x-0 top-0 pt-[70px] sm:pt-[90px] md:pt-[110px] lg:pt-[130px] z-30 flex justify-center">
+                <div className="absolute inset-x-0 top-0 pt-[90px] sm:pt-[90px] md:pt-[110px] lg:pt-[130px] z-30 flex justify-center">
                     <div className="flex flex-col items-center w-full px-4 text-center">
                         {/* Title */}
                         <div className="flex flex-col items-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">

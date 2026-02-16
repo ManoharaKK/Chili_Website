@@ -20,7 +20,7 @@ function Section02() {
         {
             title: "ISO 22000",
             subtitle: "Certified",
-            description: "Food Safety Management System certification. We are currently in the process of implementing ISO 22000 standards in our facility.",
+            description: "Food Safety Management System Certification. We are currently in the process of implementing ISO 22000 standards in our facility.",
             points: [
                 "International food safety standards",
                 "Hazard analysis and critical control",
