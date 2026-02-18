@@ -91,7 +91,17 @@ function Footer() {
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
               <p>© 2026 Mr Chilli. All rights reserved.</p>
-              <p>Designed by Sphiria Digital</p>
+              <p>
+                Designed by{' '}
+                <a 
+                  href="https://sphiriadigital.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#BF1D2E] transition-colors"
+                >
+                  Sphiria Digital
+                </a>
+              </p>
             </div>
           </div>
         </div>
