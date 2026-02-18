@@ -14,18 +14,67 @@ function Section03() {
         phone: '',
         message: ''
     })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
+        type: null,
+        message: ''
+    })
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         })
+        // Clear status message when user starts typing
+        if (submitStatus.type) {
+            setSubmitStatus({ type: null, message: '' })
+        }
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
-        console.log('Form submitted:', formData)
+        setIsSubmitting(true)
+        setSubmitStatus({ type: null, message: '' })
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+
+            const data = await response.json()
+
+            if (response.ok && data.success) {
+                setSubmitStatus({
+                    type: 'success',
+                    message: data.message || 'Thank you! Your message has been sent successfully. We will get back to you soon.'
+                })
+                // Reset form
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    message: ''
+                })
+            } else {
+                setSubmitStatus({
+                    type: 'error',
+                    message: data.error || data.message || 'Failed to send message. Please try again later.'
+                })
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error)
+            setSubmitStatus({
+                type: 'error',
+                message: 'Network error. Please check your connection and try again.'
+            })
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -133,9 +182,32 @@ function Section03() {
                             />
                         </div>
 
+                        {/* Status Message */}
+                        {submitStatus.type && (
+                            <div
+                                className={`p-4 rounded-lg ${
+                                    submitStatus.type === 'success'
+                                        ? 'bg-green-50 border border-green-200 text-green-800'
+                                        : 'bg-red-50 border border-red-200 text-red-800'
+                                }`}
+                            >
+                                <p className='text-sm sm:text-base whitespace-pre-line'>{submitStatus.message}</p>
+                            </div>
+                        )}
+
                         {/* Submit Button */}
                         <div className='flex items-center gap-3 sm:gap-4'>
-                            <Brownbutton />
+                            <button
+                                type='submit'
+                                disabled={isSubmitting}
+                                className={`text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300 ${
+                                    isSubmitting
+                                        ? 'bg-[#BF1D2E]/60 cursor-not-allowed'
+                                        : 'bg-[#BF1D2E] hover:bg-[#BF1D2E]/80'
+                                }`}
+                            >
+                                {isSubmitting ? 'Sending...' : 'Submit Application'}
+                            </button>
 
                             {/* Red Circular Elements */}
 
